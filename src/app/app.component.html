@@ -1,5 +1,30 @@
-<app-elements-home></app-elements-home>
-<app-views-home></app-views-home>
-<app-mods-home></app-mods-home>
-<app-collections-home></app-collections-home>
-<router-outlet></router-outlet>
+<!-- bootstrap -->
+<!-- <nav class="navbar navbar-expand navbar-light bg-light justify-content-center">
+    <ul class="nav navbar-nav justify-content-evenly w-100">
+        <li class="nav-item">
+            <a class="nav-link" routerLink="/elements">Elements</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" routerLink="/collections">Collections</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" routerLink="/views">Views</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" routerLink="/mods">Modules</a>
+        </li>
+    </ul>
+</nav> -->
+
+<!-- semantic ui -->
+<div class="ui container">
+    <div class="ui secondary pointing menu">
+        <a routerLink="/elements" class="item">Elements</a>
+        <a routerLink="/collections" class="item">Collections</a>
+        <a routerLink="/mods" class="item">Modules</a>
+        <a routerLink="/views" class="item">Views</a>
+    </div>
+    <div class="ui segment">
+        <router-outlet></router-outlet>
+    </div>
+</div>
