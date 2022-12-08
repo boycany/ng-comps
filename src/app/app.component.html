@@ -2,27 +2,31 @@
 <!-- <nav class="navbar navbar-expand navbar-light bg-light justify-content-center">
     <ul class="nav navbar-nav justify-content-evenly w-100">
         <li class="nav-item">
-            <a class="nav-link" routerLink="/elements">Elements</a>
+            <a class="nav-link" routerLink="/elements" routerLinkActive="active">Elements</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" routerLink="/collections">Collections</a>
+            <a class="nav-link" routerLink="/collections" routerLinkActive="active">Collections</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" routerLink="/views">Views</a>
+            <a class="nav-link" routerLink="/views" routerLinkActive="active">Views</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" routerLink="/mods">Modules</a>
+            <a class="nav-link" routerLink="/mods" routerLinkActive="active">Modules</a>
         </li>
     </ul>
-</nav> -->
+</nav>
+<div class="ui segment">
+    <router-outlet></router-outlet>
+</div> -->
 
 <!-- semantic ui -->
 <div class="ui container">
-    <div class="ui secondary pointing menu">
-        <a routerLink="/elements" class="item">Elements</a>
-        <a routerLink="/collections" class="item">Collections</a>
-        <a routerLink="/mods" class="item">Modules</a>
-        <a routerLink="/views" class="item">Views</a>
+    <div class="ui secondary menu pointing">
+        <a routerLink="/" class="item">Home</a>
+        <a routerLink="/elements" routerLinkActive="active" class="item">Elements</a>
+        <a routerLink="/collections" routerLinkActive="active" class="item">Collections</a>
+        <a routerLink="/mods" routerLinkActive="active" class="item">Modules</a>
+        <a routerLink="/views" routerLinkActive="active" class="item">Views</a>
     </div>
     <div class="ui segment">
         <router-outlet></router-outlet>
