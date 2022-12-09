@@ -14,11 +14,11 @@ import { NotFoundComponent } from './not-found/not-found.component';
   declarations: [AppComponent, HomeComponent, NotFoundComponent],
   imports: [
     BrowserModule,
-    /**----Lazy Loading -----*/
+    /**----Lazy Loading 一開始載入 app.module 的時候不要載入這些-----*/
     // ElementsModule,
     // CollectionsModule,
+    // ViewsModule,
     /**---- -----------------*/
-    ViewsModule,
     ModsModule,
     AppRoutingModule, //not-found 跟 home 的 routing 順序放在最後判定就好
   ],
