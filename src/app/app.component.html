@@ -22,11 +22,12 @@
 <!-- semantic ui -->
 <div class="ui container">
     <div class="ui secondary menu pointing">
-        <a routerLink="/" class="item">Home</a>
+        <a routerLink="/" class="item" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Home</a>
         <a routerLink="/elements" routerLinkActive="active" class="item">Elements</a>
         <a routerLink="/collections" routerLinkActive="active" class="item">Collections</a>
         <a routerLink="/mods" routerLinkActive="active" class="item">Modules</a>
-        <a routerLink="/views" routerLinkActive="active" class="item">Views</a>
+        <!-- 另一種 binding routerLink 的用法，值加入陣列 -->
+        <a [routerLink]="['/', 'views']" routerLinkActive="active" class="item">Views</a>
     </div>
     <div class="ui segment">
         <router-outlet></router-outlet>
