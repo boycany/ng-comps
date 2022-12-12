@@ -1,0 +1,13 @@
+.actions:empty {
+  display: none;
+}
+
+.actions-default {
+  display: none;
+}
+
+/* + means .actions-default come immediately after .actions:empty 如果沒有傳入 custom 的元素就顯示 default 的元素*/
+/* https://developer.mozilla.org/en-US/docs/Web/CSS/Adjacent_sibling_combinator  */
+.actions:empty + .actions-default {
+  display: block;
+}

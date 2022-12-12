@@ -18,8 +18,8 @@ import { NotFoundComponent } from './not-found/not-found.component';
     // ElementsModule,
     // CollectionsModule,
     // ViewsModule,
+    // ModsModule,
     /**---- -----------------*/
-    ModsModule,
     AppRoutingModule, //not-found 跟 home 的 routing 順序放在最後判定就好
   ],
   providers: [],

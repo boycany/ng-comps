@@ -1,1 +1,15 @@
-<p>mods-home works!</p>
+<app-divider>Modal Component</app-divider>
+<button (click)="toggleModal()">Show Modal</button>
+<app-modal *ngIf="modalOpen" (close)="toggleModal()">
+    <div modalTitle>Reusable Modal Title</div>
+    <p>
+        Some content for the modal window should go right here.
+        It is reusable.
+    </p>
+    <!-- 如果 modalCloseBtn 有被傳入元素，就顯示該 custom 的元素 -->
+    <ng-container modalCloseBtn>
+        <button class="ui button" (click)="toggleModal()">Custom CLOSE</button>
+    </ng-container>
+</app-modal>
+<app-divider>Accordion Component</app-divider>
+<app-accordion [items]="items"></app-accordion>

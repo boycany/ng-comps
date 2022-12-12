@@ -1,0 +1,18 @@
+<div class="ui dimmer visible active" (click)="onCloseClick()">
+    <div class="ui modal visible active" (click)="$event.stopPropagation()">
+        <i class="close icon" (click)="onCloseClick()"></i>
+        <div class="header">
+            <ng-content select="[modalTitle]"></ng-content>
+        </div>
+        <div class="content">
+            <ng-content></ng-content>
+        </div>
+        <!-- 如果 modalCloseBtn 有被傳入元素，就顯示該 custom 的按鈕，沒有的話，就顯示 default 的 ＯＫ -->
+        <div class="actions">
+            <ng-content select="[modalCloseBtn]"></ng-content>
+        </div>
+        <div class="actions actions-default">
+            <button class="ui button" (click)="onCloseClick()">OK</button>
+        </div>
+    </div>
+</div>
